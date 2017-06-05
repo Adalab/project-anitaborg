@@ -16,10 +16,10 @@
 
 .link-item{
   text-decoration: none;
-  color: gray;
+  color: $dark-color-typography;
   padding-top: 10px;
   transition: color 0.5s, border 0.5s;
-  font-weight: 500;
+  font-weight: $font-weight-medium;
 }
 
 .space-link{
