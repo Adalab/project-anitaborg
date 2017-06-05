@@ -38,3 +38,16 @@
 .img-logo{
   width: 100%;
 }
+
+@media (min-width:480px) {
+  .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  .space-link{
+    margin: 0 30px;
+  }
+}
