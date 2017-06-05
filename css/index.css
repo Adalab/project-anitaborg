@@ -1,0 +1,59 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px; }
+
+.nav {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  padding-top: 15px;
+  margin: 0;
+  margin-bottom: 20px; }
+
+.link-item {
+  text-decoration: none;
+  color: gray;
+  padding-top: 10px;
+  -webkit-transition: color 0.5s, border 0.5s;
+  transition: color 0.5s, border 0.5s;
+  font-weight: 500; }
+
+.space-link {
+  margin: 0 20px; }
+
+.link-item:hover {
+  color: #23F7E2;
+  border-top: 5px solid #23F7E2; }
+
+.logo-adalab {
+  width: 100px; }
+
+.img-logo {
+  width: 100%; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=index.css.map */

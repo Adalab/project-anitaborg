@@ -1,0 +1,40 @@
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav{
+  list-style: none;
+  display: flex;
+  padding: 0;
+  padding-top: 15px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.link-item{
+  text-decoration: none;
+  color: gray;
+  padding-top: 10px;
+  transition: color 0.5s, border 0.5s;
+  font-weight: 500;
+}
+
+.space-link{
+  margin: 0 20px;
+}
+
+.link-item:hover{
+  color: $branding-color;
+  border-top: 5px solid $branding-color;
+}
+
+.logo-adalab{
+  width: 100px;
+}
+
+.img-logo{
+  width: 100%;
+}
