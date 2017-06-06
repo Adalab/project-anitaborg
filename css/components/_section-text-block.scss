@@ -16,6 +16,7 @@
 .section-dark{
   color: $light-color-typography;
   background-color: $dark-background;
+
 }
 
 .section-light{
@@ -48,14 +49,11 @@
   }
   .text-and-link{
     width: 45%;
-
-  }
-  .section-dark{
-    background-color: rgba(0,0,0,0);
   }
 
   .transparent-block{
     position: absolute;
     bottom: 0;
+    background-color: rgba(0,0,0,0);
   }
 }

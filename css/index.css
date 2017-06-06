@@ -98,12 +98,10 @@ h1, h2, h3, h4, h5, h6, a {
   .text-and-link {
     width: 45%; }
 
-  .section-dark {
-    background-color: transparent; }
-
   .transparent-block {
     position: absolute;
-    bottom: 0; } }
+    bottom: 0;
+    background-color: transparent; } }
 .photo-hero {
   width: 100%;
   height: 180px;
@@ -194,7 +192,9 @@ h1, h2, h3, h4, h5, h6, a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 5em; }
+  height: 5em;
+  background-color: #f4f4f4;
+  width: 100%; }
 
 .uppercase {
   text-transform: uppercase; }
