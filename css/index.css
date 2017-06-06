@@ -13,7 +13,8 @@ body {
   font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6, a {
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; }
 
 .btn {
   background-color: #30d9c4;
@@ -39,6 +40,30 @@ h1, h2, h3, h4, h5, h6, a {
   font-family: "Montserrat", sans-serif;
   color: #555;
   font-size: 18px; }
+
+.text-block {
+  padding: 20px;
+  border: 2px solid black; }
+
+.title-block {
+  font-size: 1.5em;
+  text-align: center; }
+
+.link-wiki {
+  color: #30d9c4;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s; }
+
+.link-wiki:hover {
+  color: #fff; }
+
+.section-dark {
+  color: #fff;
+  background-color: #000; }
+
+.section-light {
+  color: #fff;
+  background-color: #f4f4f4; }
 
 .header {
   display: -webkit-box;

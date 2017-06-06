@@ -1,0 +1,23 @@
+.text-block{
+  padding: 20px;
+  border: 2px solid black;
+}
+.title-block{
+  font-size: 1.5em;
+  text-align: center;
+}
+.link-wiki{
+  color: $branding-color;
+  transition: color 0.5s;
+}
+.link-wiki:hover{
+  color: $light-color-typography;
+}
+.section-dark{
+  color: $light-color-typography;
+  background-color: $dark-background;
+}
+.section-light{
+  color: $light-color-typography;
+  background-color: $light-background;
+}
