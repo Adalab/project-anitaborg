@@ -17,13 +17,15 @@
   color: $light-color-typography;
   background-color: $dark-background;
 }
+
 .section-light{
-  color: $light-color-typography;
+  color: $dark-color-typography;
   background-color: $light-background;
 }
 
 .section-reverse{
   order: -1;
+
 }
 
 
@@ -33,8 +35,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px 76px ;
-    position: absolute;
-    bottom: 0;
+
   }
   .photo-hero{
     position: relative;
@@ -53,4 +54,8 @@
     background-color: rgba(0,0,0,0);
   }
 
+  .transparent-block{
+    position: absolute;
+    bottom: 0;
+  }
 }

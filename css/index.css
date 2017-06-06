@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, a {
   background-color: #30d9c4;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  width: 400px;
+  width: 100%;
   height: 64px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,6 +41,9 @@ h1, h2, h3, h4, h5, h6, a {
   color: #555;
   font-size: 18px; }
 
+@media (min-width: 760px) {
+  .btn {
+    width: 400px; } }
 .text-block {
   padding: 20px; }
 
@@ -62,7 +65,7 @@ h1, h2, h3, h4, h5, h6, a {
   background-color: #000; }
 
 .section-light {
-  color: #fff;
+  color: #555;
   background-color: #f4f4f4; }
 
 .section-reverse {
@@ -81,9 +84,7 @@ h1, h2, h3, h4, h5, h6, a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 30px 76px;
-    position: absolute;
-    bottom: 0; }
+    padding: 30px 76px; }
 
   .photo-hero {
     position: relative; }
@@ -98,7 +99,11 @@ h1, h2, h3, h4, h5, h6, a {
     width: 45%; }
 
   .section-dark {
-    background-color: transparent; } }
+    background-color: transparent; }
+
+  .transparent-block {
+    position: absolute;
+    bottom: 0; } }
 .photo-hero {
   width: 100%;
   height: 180px;
