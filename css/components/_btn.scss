@@ -1,0 +1,21 @@
+.btn{
+  background-color: $branding-color;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  width: 400px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.gradient-btn-start{
+  height: 100%;
+  width: 16%;
+  background-image: linear-gradient(to bottom, $branding-color, #2aa393);
+}
+
+.btn-text{
+  margin-left: 20px;
+  font-family: $main-typography;
+  color: $dark-color-typography;
+  font-size: 18px;
+}

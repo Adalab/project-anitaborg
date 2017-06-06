@@ -5,9 +5,40 @@
 body {
   margin: 0; }
 
+a {
+  text-decoration: none; }
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px; }
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: "Montserrat", sans-serif; }
+
+.btn {
+  background-color: #30d9c4;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  width: 400px;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.gradient-btn-start {
+  height: 100%;
+  width: 16%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#30d9c4), to(#2aa393));
+  background-image: linear-gradient(to bottom, #30d9c4, #2aa393); }
+
+.btn-text {
+  margin-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #555;
+  font-size: 18px; }
 
 .header {
   display: -webkit-box;
@@ -33,8 +64,7 @@ body {
   margin-bottom: 20px; }
 
 .link-item {
-  text-decoration: none;
-  color: gray;
+  color: #555;
   padding-top: 10px;
   -webkit-transition: color 0.5s, border 0.5s;
   transition: color 0.5s, border 0.5s;
@@ -44,8 +74,8 @@ body {
   margin: 0 20px; }
 
 .link-item:hover {
-  color: #23F7E2;
-  border-top: 5px solid #23F7E2; }
+  color: #30d9c4;
+  border-top: 5px solid #30d9c4; }
 
 .logo-adalab {
   width: 100px; }
@@ -55,9 +85,6 @@ body {
 
 @media (min-width: 480px) {
   .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -70,7 +97,8 @@ body {
   .space-link {
     margin: 0 30px; } }
 .footer {
-  color: gray;
+  color: #555;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;

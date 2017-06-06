@@ -15,7 +15,6 @@
 }
 
 .link-item{
-  text-decoration: none;
   color: $dark-color-typography;
   padding-top: 10px;
   transition: color 0.5s, border 0.5s;
@@ -41,7 +40,6 @@
 
 @media (min-width:480px) {
   .header{
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 40px;
