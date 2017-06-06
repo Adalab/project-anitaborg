@@ -1,12 +1,12 @@
 .text-block{
   padding: 20px;
-  border: 2px solid black;
 }
 .title-block{
   font-size: 1.5em;
   text-align: center;
 }
 .link-wiki{
+  font-weight: $font-weight-regular;
   color: $branding-color;
   transition: color 0.5s;
 }
@@ -20,4 +20,37 @@
 .section-light{
   color: $light-color-typography;
   background-color: $light-background;
+}
+
+.section-reverse{
+  order: -1;
+}
+
+
+@media (min-width:760px) {
+  .text-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 76px ;
+    position: absolute;
+    bottom: 0;
+  }
+  .photo-hero{
+    position: relative;
+  }
+  .title-block{
+    width: 45%;
+    font-size: 4em;
+    font-weight: $font-weight-regular;
+    text-align: left;
+  }
+  .text-and-link{
+    width: 45%;
+
+  }
+  .section-dark{
+    background-color: rgba(0,0,0,0);
+  }
+
 }

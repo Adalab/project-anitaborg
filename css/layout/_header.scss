@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   padding: 0 20px;
+  z-index: 99;
+  background: $light-background;
+  width: 100%;
 }
 
 .nav{
@@ -38,8 +41,9 @@
   width: 100%;
 }
 
-@media (min-width:480px) {
+@media (min-width:760px) {
   .header{
+    position: absolute;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 40px;
