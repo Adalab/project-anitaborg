@@ -21,19 +21,31 @@ h1, h2, h3, h4, h5, h6, a {
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: 64px;
+  max-width: 280px;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin: 0 auto;
+  font-size: 15px; }
 
 .gradient-btn-start {
   height: 100%;
-  width: 16%;
+  width: 40px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#30d9c4), to(#2aa393));
-  background-image: linear-gradient(to bottom, #30d9c4, #2aa393); }
+  background-image: linear-gradient(to bottom, #30d9c4, #2aa393);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .btn-text {
   margin-left: 20px;
@@ -41,9 +53,15 @@ h1, h2, h3, h4, h5, h6, a {
   color: #555;
   font-size: 18px; }
 
-@media (min-width: 760px) {
+@media (min-width: 800px) {
   .btn {
-    width: 400px; } }
+    width: 400px;
+    max-width: 400px;
+    height: 64px;
+    margin: 0; }
+
+  .gradient-btn-start {
+    width: 16%; } }
 .text-block {
   padding: 20px; }
 
@@ -73,7 +91,7 @@ h1, h2, h3, h4, h5, h6, a {
       -ms-flex-order: -1;
           order: -1; }
 
-@media (min-width: 760px) {
+@media (min-width: 800px) {
   .text-block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -90,7 +108,7 @@ h1, h2, h3, h4, h5, h6, a {
     position: relative; }
 
   .title-block {
-    width: 45%;
+    width: 35%;
     font-size: 4em;
     font-weight: 400;
     text-align: left; }
@@ -110,7 +128,7 @@ h1, h2, h3, h4, h5, h6, a {
   background-size: cover;
   background-position: center; }
 
-@media (min-width: 760px) {
+@media (min-width: 800px) {
   .photo-hero {
     width: 100%;
     height: 100vh;
@@ -119,6 +137,63 @@ h1, h2, h3, h4, h5, h6, a {
     background-attachment: fixed;
     background-size: cover;
     background-position: center; } }
+.main-quiz {
+  background-color: black;
+  padding-top: 44px;
+  position: relative;
+  z-index: -99; }
+
+.img-einstein {
+  width: 100%; }
+
+.img-einstein img {
+  width: 100%; }
+
+.transparent-block-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 20px 30px;
+  color: white; }
+
+@media (min-width: 800px) {
+  .transparent-block-page {
+    width: 45%;
+    padding: 0; }
+
+  .title-block-quiz {
+    max-width: 350px;
+    font-size: 64px;
+    font-weight: 400;
+    margin-top: 0; }
+
+  .main-quiz {
+    background-image: url("../images/einstein.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 45%;
+    background-attachment: scroll;
+    padding: 100px 76px;
+    height: 1693px; }
+
+  .img-einstein {
+    display: none; }
+
+  .img-einstein img {
+    width: 100%; }
+
+  .text-block-colum {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,8 +231,7 @@ h1, h2, h3, h4, h5, h6, a {
   margin: 0 20px; }
 
 .link-item:hover {
-  color: #30d9c4;
-  border-top: 5px solid #30d9c4; }
+  color: #30d9c4; }
 
 .logo-adalab {
   width: 100px; }
@@ -165,9 +239,8 @@ h1, h2, h3, h4, h5, h6, a {
 .img-logo {
   width: 100%; }
 
-@media (min-width: 760px) {
+@media (min-width: 800px) {
   .header {
-    position: absolute;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -176,6 +249,9 @@ h1, h2, h3, h4, h5, h6, a {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 40px; }
+
+  .header-hero {
+    position: absolute; }
 
   .space-link {
     margin: 0 30px; } }
@@ -198,5 +274,12 @@ h1, h2, h3, h4, h5, h6, a {
 
 .uppercase {
   text-transform: uppercase; }
+
+.bold {
+  font-weight: 500; }
+
+.nav-active {
+  color: #30d9c4;
+  border-top: 5px solid #30d9c4; }
 
 /*# sourceMappingURL=index.css.map */

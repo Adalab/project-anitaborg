@@ -2,26 +2,40 @@
   background-color: $branding-color;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
   width: 100%;
-  height: 64px;
+  max-width: 280px;
+  height: 40px;
   display: flex;
   align-items: center;
+  margin: 0 auto;
+  font-size: 15px;
 }
-
 .gradient-btn-start{
   height: 100%;
-  width: 16%;
+  width: 40px;
   background-image: linear-gradient(to bottom, $branding-color, #2aa393);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .btn-text{
   margin-left: 20px;
   font-family: $main-typography;
   color: $dark-color-typography;
   font-size: 18px;
 }
+.icon-btn{
 
-@media (min-width:760px){
+}
+
+@media (min-width: $breakpoint-desktop){
   .btn {
     width: 400px;
+    max-width: 400px;
+    height: 64px;
+    margin: 0;
   }
+  .gradient-btn-start{
+    width: 16%;
+  }
+
 }

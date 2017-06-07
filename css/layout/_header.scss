@@ -30,7 +30,6 @@
 
 .link-item:hover{
   color: $branding-color;
-  border-top: 5px solid $branding-color;
 }
 
 .logo-adalab{
@@ -41,12 +40,14 @@
   width: 100%;
 }
 
-@media (min-width:760px) {
+@media (min-width: $breakpoint-desktop) {
   .header{
-    position: absolute;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 40px;
+  }
+  .header-hero{
+    position: absolute;
   }
 
   .space-link{
