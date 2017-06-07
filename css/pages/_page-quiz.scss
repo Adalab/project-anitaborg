@@ -17,6 +17,9 @@
   padding:  0px 20px 30px;
   color: white;
 }
+.title-block-quiz{
+  text-align: center;
+}  
 
 
 @media (min-width: $breakpoint-desktop){
@@ -29,6 +32,7 @@
     font-size: 64px;
     font-weight: $font-weight-regular;
     margin-top: 0;
+    text-align: left;
   }
   .main-quiz{
     background-image: url("../images/einstein.jpg");

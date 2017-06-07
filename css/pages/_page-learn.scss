@@ -1,0 +1,21 @@
+.main-learn{
+  background-color: $dark-background;
+}
+
+.title-block-learn{
+  text-align: center;
+}
+
+
+@media (min-width: $breakpoint-desktop){
+  .title-block-learn{
+    max-width: 568px;
+    font-size: 64px;
+    font-weight: $font-weight-regular;
+    margin-top: 0;
+    text-align: left;
+  }
+  .main-learn{
+    padding: 100px 76px;
+  }
+}

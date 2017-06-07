@@ -137,6 +137,22 @@ h1, h2, h3, h4, h5, h6, a {
     background-attachment: fixed;
     background-size: cover;
     background-position: center; } }
+.main-learn {
+  background-color: #000; }
+
+.title-block-learn {
+  text-align: center; }
+
+@media (min-width: 800px) {
+  .title-block-learn {
+    max-width: 568px;
+    font-size: 64px;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: left; }
+
+  .main-learn {
+    padding: 100px 76px; } }
 .main-quiz {
   background-color: black;
   padding-top: 44px;
@@ -160,6 +176,9 @@ h1, h2, h3, h4, h5, h6, a {
   padding: 0px 20px 30px;
   color: white; }
 
+.title-block-quiz {
+  text-align: center; }
+
 @media (min-width: 800px) {
   .transparent-block-page {
     width: 45%;
@@ -169,7 +188,8 @@ h1, h2, h3, h4, h5, h6, a {
     max-width: 350px;
     font-size: 64px;
     font-weight: 400;
-    margin-top: 0; }
+    margin-top: 0;
+    text-align: left; }
 
   .main-quiz {
     background-image: url("../images/einstein.jpg");
