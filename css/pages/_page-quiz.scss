@@ -3,6 +3,7 @@
   padding-top: 44px;
   position: relative;
   z-index: -99;
+  flex-grow: 1;
 }
 .img-einstein{
   width: 100%;
@@ -10,7 +11,6 @@
 .img-einstein img{
   width: 100%;
 }
-
 .transparent-block-page{
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
 }
 .title-block-quiz{
   text-align: center;
-}  
+}
 
 
 @media (min-width: $breakpoint-desktop){
@@ -41,8 +41,6 @@
     background-size: 45%;
     background-attachment: scroll;
     padding: 100px 76px ;
-    height: 1693px;
-
   }
   .img-einstein{
     display: none;
