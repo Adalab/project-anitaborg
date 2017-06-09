@@ -20,25 +20,17 @@ function downloadFile() {
         var documentoXml = peticionHttp.responseXML;
         //Obtenemos la raíz del documento
         var root = documentoXml.getElementsByTagName("GoodreadsResponse")[0];
-        console.log(root);
         var stopPoint = 9;
-        console.log(stopPoint);
         //Recorremos todos los elementos Libro del documento
         var booksHTML = "";
         for(var i = 0; i < stopPoint; i++){
           var book = root.getElementsByTagName("best_book")[i];
-          console.log(book);
           var author = book.getElementsByTagName("name")[0].firstChild.nodeValue;
-          console.log(author);
           var title = book.getElementsByTagName("title")[0].firstChild.nodeValue;
-          console.log(title);
           var valoration = root.getElementsByTagName("average_rating")[0].firstChild.nodeValue;
-          console.log(title);
           var cover = book.getElementsByTagName("image_url")[0].firstChild.nodeValue;
-          console.log(cover);
           booksHTML += '<div class="random-book"><div class="cover-photo-book"><img class="img-cover-book" src="' + cover + '" alt=""></div><div class="info-book"><p class="title-book"><span class="bold-text">' + title + '</span></p><p class="author-book">' + author + '</p><p class="user-valoration">' + valoration + '/10</p><p class="isbn-number">ISBN:</p></div></div>';
         }
-        console.log(booksHTML);
         gridBooks.innerHTML = booksHTML;
       }
     }
