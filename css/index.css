@@ -26,6 +26,9 @@ h1, h2, h3, h4, h5, h6, a {
   font-family: "Montserrat", sans-serif;
   font-weight: 500; }
 
+.bold-text {
+  font-weight: 700; }
+
 .btn {
   border: none;
   padding: 0;
@@ -164,6 +167,41 @@ h1, h2, h3, h4, h5, h6, a {
 .title-block-learn {
   text-align: center; }
 
+#grid-books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 20px; }
+
+.random-book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  width: 100%;
+  margin-bottom: 20px; }
+
+.cover-photo-book {
+  width: 45%; }
+
+.img-cover-book {
+  width: 100%; }
+
+.info-book {
+  color: white;
+  width: 45%; }
+
+.random-book p {
+  margin: 2px 0; }
+
 @media (min-width: 800px) {
   .title-block-learn {
     max-width: 568px;
@@ -173,7 +211,14 @@ h1, h2, h3, h4, h5, h6, a {
     text-align: left; }
 
   .main-learn {
-    padding: 100px 76px; } }
+    padding: 100px 76px; }
+
+  .random-book {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: white;
+    width: 28%; } }
 .main-quiz {
   background-color: black;
   padding-top: 44px;

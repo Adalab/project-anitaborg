@@ -2,9 +2,34 @@
   background-color: $dark-background;
   flex-grow: 1;
 }
-
 .title-block-learn{
   text-align: center;
+}
+#grid-books{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px 20px;
+}
+.random-book{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.cover-photo-book{
+  width: 45%;
+}
+.img-cover-book{
+  width: 100%;
+}
+.info-book{
+  color: white;
+  width: 45%;
+}
+.random-book p{
+  margin: 2px 0;
 }
 
 
@@ -18,5 +43,10 @@
   }
   .main-learn{
     padding: 100px 76px;
+  }
+  .random-book{
+    display: flex;
+    color: white;
+    width: 28%;
   }
 }
