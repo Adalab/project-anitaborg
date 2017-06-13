@@ -9,15 +9,17 @@ var question = document.querySelector('.question-text');
  var request = new XMLHttpRequest();
 
 function startTest(){
-   request.open('GET', 'https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple'+ InputSearch.value, true);
+  console.log("holi");
+   request.open('GET', 'https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple', true);
    request.onload = function() {
      if (request.status >= 200 && request.status < 400) {
        var data = JSON.parse(request.responseText);
-       question.innerHTML = data."question";
-       answerOne.innerHTML= data."correct_answer";
-       answerTwo.innerHTML = data."incorrect_answers"[0];
-       answerThree.innerHTML = data."incorrect_answers"[1];
-       answerFour.innerHTML = data."incorrect_answers"[2];
+       question.innerHTML = data.results[0].question;
+       console.log(data.results[0].question);
+       answerOne.innerHTML= data.results[0].correct_answer;
+       answerTwo.innerHTML = data.results[0].incorrect_answers[0];
+       answerThree.innerHTML = data.results[0].incorrect_answers[1];
+       answerFour.innerHTML = data.results[0].incorrect_answers[2];
      } else {
        console.log('Error del servidor, puede que el archivo no exista o que se haya producido un error interno en el servidor');
      }
