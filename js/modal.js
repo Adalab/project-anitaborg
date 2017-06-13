@@ -3,11 +3,11 @@ var modal = document.querySelector(".quiz-modal");
 var btnOpen = document.querySelector(".btn-quiz");
 
 function openModal(){
-  modal.classList.add("modalon");
+  modal.classList.add("modal-on");
 }
 
 function closeModal(){
-  modal.classList.remove("modalon");
+  modal.classList.remove("modal-on");
 }
 
 btnOpen.addEventListener("click",openModal);
