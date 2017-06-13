@@ -27,6 +27,7 @@
   background-color: rgba(0,0,0,0.9);
   top: 0;
   left: 0;
+  display: none;
 }
 .info-quiz{
   width: 80%;
@@ -59,6 +60,12 @@
 }
 .option-quiz{
   margin: 10px 0;
+  cursor: pointer;
+}
+.radio-format{
+  cursor: pointer;
+  background-color: transparent;
+  border: black;
 }
 
 

@@ -47,7 +47,7 @@
           <p>
             ¡Mucha suerte!
           </p>
-          <button type="button" name="button-quiz" class="btn">
+          <button type="button" name="button-quiz" class="btn btn-quiz">
             <div class="gradient-btn-start">
               <img  class="icon-btn" src="images/play.png" alt="Boton Play">
             </div>
@@ -62,10 +62,10 @@
           <div class="question-quiz">
             <p class="number-question">Pregunta 1/10</p>
             <p class="question-text">Which of these programming languages is a low-level language?</p>
-            <label class="option-quiz" for="radiogroup"><input type="radio" name="radiogroup" value="">Assembly</label>
-            <label class="option-quiz" for="radiogroup"><input type="radio" name="radiogroup" value="">Python</label>
-            <label class="option-quiz" for="radiogroup"><input type="radio" name="radiogroup" value="">C#</label>
-            <label class="option-quiz" for="radiogroup"><input type="radio" name="radiogroup" value="">Pascal</label>
+            <label class="option-quiz" for="option1"><input class="radio-format" id="option1" type="radio" name="radiogroup" value="">Assembly</label>
+            <label class="option-quiz" for="option2"><input class="radio-format" id="option2" type="radio" name="radiogroup" value="">Python</label>
+            <label class="option-quiz" for="option3"><input class="radio-format" id="option3" type="radio" name="radiogroup" value="">C#</label>
+            <label class="option-quiz" for="option4"><input class="radio-format" id="option4" type="radio" name="radiogroup" value="">Pascal</label>
             <button type="button" name="button-quiz" class="btn">
               <div class="gradient-btn-start">
               </div>
@@ -74,13 +74,14 @@
           </div>
         </div>
       </div>
-
     </main>
 
     <footer class="footer">
       <p class="uppercase copyright">Adalab 2017</p>
     </footer>
   </div>
+
+  <script src="js/modal.js" charset="utf-8"></script>
 </body>
 
 </html>

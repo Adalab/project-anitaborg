@@ -9,5 +9,12 @@
 .nav-active{
   color: $branding-color;
   border-top: 5px solid $branding-color;
+}
 
+.modal-off{
+  display: none;
+}
+
+.modalon{
+  display: block;
 }
