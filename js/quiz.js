@@ -1,5 +1,5 @@
 "use strict";
-
+var number = document.querySelector('.number-question');
 var question = document.querySelector('.question-text');
 var answerOne = document.getElementById('answer1');
 var answerTwo = document.getElementById('answer2');
@@ -10,13 +10,14 @@ var btnNext = document.querySelector(".btn-next");
 var request = new XMLHttpRequest();
 
 function printTestQuestion(testInfo,index) {
-  question.innerHTML=testInfo.questionList[index];
-  answerOne.innerHTML=testInfo.correctList[index];
-  answerTwo.innerHTML=testInfo.incorrectList[index][0];
-  answerThree.innerHTML=testInfo.incorrectList[index][1];
-  answerFour.innerHTML=testInfo.incorrectList[index][2];
 
   if (index < 10) {
+    number.innerHTML='Pregunta '+(index +1)+'/10';
+    question.innerHTML=testInfo.questionList[index];
+    answerOne.innerHTML=testInfo.correctList[index];
+    answerTwo.innerHTML=testInfo.incorrectList[index][0];
+    answerThree.innerHTML=testInfo.incorrectList[index][1];
+    answerFour.innerHTML=testInfo.incorrectList[index][2];
     index=index+1;
     btnNext.addEventListener("click", printTestQuestion.bind(null, testInfo, index));
 
