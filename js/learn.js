@@ -2,10 +2,9 @@ var gridBooks = document.querySelector("#grid-books");
 
 function downloadFile() {
   // Obtener la instancia del objeto XMLHttpRequest
-  if(window.XMLHttpRequest) {
-     peticionHttp = new XMLHttpRequest();
-  }
-  else if(window.ActiveXObject) {
+  if (window.XMLHttpRequest) {
+    peticionHttp = new XMLHttpRequest();
+  } else if (window.ActiveXObject) {
     peticionHttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
   // Preparar la funcion de respuesta
@@ -13,9 +12,10 @@ function downloadFile() {
   // Realizar peticion HTTP
   peticionHttp.open('GET', 'https://www.goodreads.com/search.xml?key=Th7taggCCLhLD2r7cfAmlQ&q=Computer%27s+Science', true);
   peticionHttp.send(null);
+
   function muestraContenido() {
-    if(peticionHttp.readyState == 4) {
-      if(peticionHttp.status == 200) {
+    if (peticionHttp.readyState == 4) {
+      if (peticionHttp.status == 200) {
         //Creamos el objeto de tipo documento XML
         var documentoXml = peticionHttp.responseXML;
         //Obtenemos la raíz del documento
@@ -23,7 +23,7 @@ function downloadFile() {
         var stopPoint = 9;
         //Recorremos todos los elementos Libro del documento
         var booksHTML = "";
-        for(var i = 0; i < stopPoint; i++){
+        for (var i = 0; i < stopPoint; i++) {
           var book = root.getElementsByTagName("best_book")[i];
           var author = book.getElementsByTagName("name")[0].firstChild.nodeValue;
           var title = book.getElementsByTagName("title")[0].firstChild.nodeValue;

@@ -9,26 +9,39 @@ var btnStart = document.querySelector('.btn-quiz');
 var btnNext = document.querySelector(".btn-next");
 var request = new XMLHttpRequest();
 
-function startTest() {
+function printTestQuestion(testInfo,index) {
+  question.innerHTML=testInfo.questionList[index];
+  answerOne.innerHTML=testInfo.correctList[index];
+  answerTwo.innerHTML=testInfo.incorrectList[index][0];
+  answerThree.innerHTML=testInfo.incorrectList[index][1];
+  answerFour.innerHTML=testInfo.incorrectList[index][2];
+
+  if (index < 10) {
+    index=index+1;
+    btnNext.addEventListener("click", printTestQuestion.bind(null, testInfo, index));
+
+  }else{
+    console.log("ultima pregunta");
+  }
+}
+
+function getTestInfo() {
   request.open('GET', 'https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple', true);
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
       var data = JSON.parse(request.responseText);
-      var questionList = [];
-      var correctList = [];
-      var incorrectList = [];
-      for (var i = 0; i < 10; i++) {
-        questionList.push(data.results[i].question);
-        correctList.push(data.results[i].correct_answer);
-        incorrectList.push(data.results[i].incorrect_answers);
-      }
       var info = {
-        questionList: questionList,
-        correctList: correctList,
-        incorrectList: incorrectList
+        questionList: [],
+        correctList: [],
+        incorrectList: []
       };
-      console.log(info);
-      return info;
+      for (var i = 0; i < 10; i++) {
+        info.questionList.push(data.results[i].question);
+        info.correctList.push(data.results[i].correct_answer);
+        info.incorrectList.push(data.results[i].incorrect_answers);
+      }
+      console.log(info.questionList);
+      printTestQuestion(info, 0);
     } else {
       console.log('Error del servidor, puede que el archivo no exista o que se haya producido un error interno en el servidor');
     }
@@ -39,18 +52,9 @@ function startTest() {
 
   request.send();
 }
-var questionNumber=0;
 
-function placeInfo(){
-  var infoTest=startTest();
-  console.log(infoTest);
-  question.innerHTML = infoTest.questionList[questionNumber];
-  answerOne.innerHTML = infoTest.correctList[questionNumber];
-  answerTwo.innerHTML = infoTest.incorrectList[questionNumber][0];
-  answerThree.innerHTML = infoTest.incorrectList[questionNumber][1];
-  answerFour.innerHTML = infoTest.incorrectList[questionNumber][2];
-  questionNumber=questionNumber+1;
+function initTest(){
+  getTestInfo();
 }
 
-btnStart.addEventListener('click', placeInfo);
-btnNext.addEventListener("click", placeInfo);
+btnStart.addEventListener('click', initTest);
