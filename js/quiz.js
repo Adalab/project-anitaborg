@@ -14,20 +14,21 @@ function startTest() {
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
       var data = JSON.parse(request.responseText);
+      var questionList = [];
+      var correctList = [];
+      var incorrectList = [];
       for (var i = 0; i < 10; i++) {
-        var questionList=[];
         questionList.push(data.results[i].question);
-        var correctList=[];
         correctList.push(data.results[i].correct_answer);
-        var incorrectList=[];
         incorrectList.push(data.results[i].incorrect_answers);
       }
-
-      question.innerHTML = data.results[0].question;
-      answerOne.innerHTML = data.results[0].correct_answer;
-      answerTwo.innerHTML = data.results[0].incorrect_answers[0];
-      answerThree.innerHTML = data.results[0].incorrect_answers[1];
-      answerFour.innerHTML = data.results[0].incorrect_answers[2];
+      var info = {
+        questionList: questionList,
+        correctList: correctList,
+        incorrectList: incorrectList
+      };
+      console.log(info);
+      return info;
     } else {
       console.log('Error del servidor, puede que el archivo no exista o que se haya producido un error interno en el servidor');
     }
@@ -38,6 +39,18 @@ function startTest() {
 
   request.send();
 }
+var questionNumber=0;
 
-btnStart.addEventListener('click', startTest);
-btnNext.addEventListener("click", startTest);
+function placeInfo(){
+  var infoTest=startTest();
+  console.log(infoTest);
+  question.innerHTML = infoTest.questionList[questionNumber];
+  answerOne.innerHTML = infoTest.correctList[questionNumber];
+  answerTwo.innerHTML = infoTest.incorrectList[questionNumber][0];
+  answerThree.innerHTML = infoTest.incorrectList[questionNumber][1];
+  answerFour.innerHTML = infoTest.incorrectList[questionNumber][2];
+  questionNumber=questionNumber+1;
+}
+
+btnStart.addEventListener('click', placeInfo);
+btnNext.addEventListener("click", placeInfo);
