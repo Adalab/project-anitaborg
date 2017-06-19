@@ -8,9 +8,11 @@ var answerFour = document.getElementById('answer4');
 var btnStart = document.querySelector('.btn-quiz');
 var btnNext = document.querySelector(".btn-next");
 var request = new XMLHttpRequest();
+var index= 0;
+var testInfo = null;
 
-function printTestQuestion(testInfo,index) {
-
+function printTestQuestion(e) {
+  debugger;
   if (index < 10) {
     number.innerHTML='Pregunta '+(index +1)+'/10';
     question.innerHTML=testInfo.questionList[index];
@@ -18,11 +20,16 @@ function printTestQuestion(testInfo,index) {
     answerTwo.innerHTML=testInfo.incorrectList[index][0];
     answerThree.innerHTML=testInfo.incorrectList[index][1];
     answerFour.innerHTML=testInfo.incorrectList[index][2];
+    if (index !== 0){
+      btnNext.removeEventListener("click", printTestQuestion);
+    }
+    
     index=index+1;
-    btnNext.addEventListener("click", printTestQuestion.bind(null, testInfo, index));
+    console.log(index);
+    btnNext.addEventListener("click", printTestQuestion);
 
   }else{
-    console.log("ultima pregunta");
+    console.log("Pintar resultado");
   }
 }
 
@@ -42,7 +49,8 @@ function getTestInfo() {
         info.incorrectList.push(data.results[i].incorrect_answers);
       }
       console.log(info.questionList);
-      printTestQuestion(info, 0);
+      testInfo = info
+      printTestQuestion(null);
     } else {
       console.log('Error del servidor, puede que el archivo no exista o que se haya producido un error interno en el servidor');
     }
@@ -57,5 +65,4 @@ function getTestInfo() {
 function initTest(){
   getTestInfo();
 }
-
 btnStart.addEventListener('click', initTest);
