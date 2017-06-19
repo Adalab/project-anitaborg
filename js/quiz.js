@@ -7,20 +7,21 @@ var answerThree = document.getElementById('answer3');
 var answerFour = document.getElementById('answer4');
 var btnStart = document.querySelector('.btn-quiz');
 var btnNext = document.querySelector(".btn-next");
+var index=0;
+var info;
 var request = new XMLHttpRequest();
 
-function printTestQuestion(testInfo,index) {
+function printTestQuestion() {
 
   if (index < 10) {
     number.innerHTML='Pregunta '+(index +1)+'/10';
-    question.innerHTML=testInfo.questionList[index];
-    answerOne.innerHTML=testInfo.correctList[index];
-    answerTwo.innerHTML=testInfo.incorrectList[index][0];
-    answerThree.innerHTML=testInfo.incorrectList[index][1];
-    answerFour.innerHTML=testInfo.incorrectList[index][2];
+    question.innerHTML=info.questionList[index];
+    answerOne.innerHTML=info.correctList[index];
+    answerTwo.innerHTML=info.incorrectList[index][0];
+    answerThree.innerHTML=info.incorrectList[index][1];
+    answerFour.innerHTML=info.incorrectList[index][2];
     index=index+1;
-    btnNext.addEventListener("click", printTestQuestion.bind(null, testInfo, index));
-
+    console.log(index);
   }else{
     console.log("ultima pregunta");
   }
@@ -31,7 +32,7 @@ function getTestInfo() {
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
       var data = JSON.parse(request.responseText);
-      var info = {
+      info = {
         questionList: [],
         correctList: [],
         incorrectList: []
@@ -41,8 +42,8 @@ function getTestInfo() {
         info.correctList.push(data.results[i].correct_answer);
         info.incorrectList.push(data.results[i].incorrect_answers);
       }
-      console.log(info.questionList);
-      printTestQuestion(info, 0);
+      printTestQuestion(info,index);
+      btnNext.addEventListener("click", printTestQuestion);
     } else {
       console.log('Error del servidor, puede que el archivo no exista o que se haya producido un error interno en el servidor');
     }
@@ -54,8 +55,8 @@ function getTestInfo() {
   request.send();
 }
 
-function initTest(){
-  getTestInfo();
-}
+// function initTest(){
+  // getTestInfo();
+// }
 
-btnStart.addEventListener('click', initTest);
+btnStart.addEventListener('click', getTestInfo);
