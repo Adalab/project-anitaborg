@@ -9,21 +9,41 @@ var btnStart = document.querySelector('.btn-quiz');
 var btnNext = document.querySelector(".btn-next");
 var index=0;
 var info;
+var random;
+var result = 0;
 var request = new XMLHttpRequest();
 
 function printTestQuestion() {
 
   if (index < 10) {
+    if (index > 0 && random === parseInt(document.querySelector('.radio-format:checked').value)) {
+      result = result + 1;
+    }
+    else{
+      result = result + 0;
+    }
+    random = Math.floor(Math.random() * (4 - 0)) + 0;
+    console.log(random);
+    var positionAnswer = [];
+    for (var i = 0; i < 3; i++) {
+      positionAnswer.push(info.incorrectList[index][i]);
+    }
+    positionAnswer.splice(random, 0, info.correctList[index]);
     number.innerHTML='Pregunta '+(index +1)+'/10';
     question.innerHTML=info.questionList[index];
-    answerOne.innerHTML=info.correctList[index];
-    answerTwo.innerHTML=info.incorrectList[index][0];
-    answerThree.innerHTML=info.incorrectList[index][1];
-    answerFour.innerHTML=info.incorrectList[index][2];
+    answerOne.innerHTML=positionAnswer[0];
+    answerTwo.innerHTML=positionAnswer[1];
+    answerThree.innerHTML=positionAnswer[2];
+    answerFour.innerHTML=positionAnswer[3];
     index=index+1;
-    console.log(index);
   }else{
-    console.log("ultima pregunta");
+    if (index > 0 && random === parseInt(document.querySelector('.radio-format:checked').value)) {
+      result = result + 1;
+    }
+    else{
+      result = result + 0;
+    }
+    console.log("Tu resultado es " + result);
   }
 }
 
@@ -55,8 +75,10 @@ function getTestInfo() {
   request.send();
 }
 
-// function initTest(){
-  // getTestInfo();
-// }
+function initTest(){
+  getTestInfo();
+  result = 0;
+  index = 0;
+}
 
-btnStart.addEventListener('click', getTestInfo);
+btnStart.addEventListener('click', initTest);

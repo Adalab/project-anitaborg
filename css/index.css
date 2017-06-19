@@ -73,12 +73,18 @@ h1, h2, h3, h4, h5, h6, a {
 .icon-btn {
   width: 32px; }
 
+.btn-next {
+  margin-top: 15px; }
+
 @media (min-width: 800px) {
   .btn {
     width: 400px;
     max-width: 400px;
     height: 64px;
     margin: 0; }
+
+  .btn-next {
+    margin-top: 15px; }
 
   .gradient-btn-start {
     width: 16%;
@@ -296,6 +302,9 @@ h1, h2, h3, h4, h5, h6, a {
 
 .question-text {
   font-size: 18px; }
+
+.container-option-quiz {
+  margin: 5px 0; }
 
 .option-quiz {
   margin: 10px 0;

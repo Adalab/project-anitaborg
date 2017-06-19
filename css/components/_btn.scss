@@ -30,6 +30,9 @@
 .icon-btn{
   width: 32px;
 }
+.btn-next{
+  margin-top: 15px;
+}
 
 @media (min-width: $breakpoint-desktop){
   .btn {
@@ -37,6 +40,9 @@
     max-width: 400px;
     height: 64px;
     margin: 0;
+  }
+  .btn-next{
+    margin-top: 15px;
   }
   .gradient-btn-start{
     width: 16%;
