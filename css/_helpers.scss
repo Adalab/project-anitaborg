@@ -1,16 +1,16 @@
 .uppercase{
   text-transform: uppercase;
 }
-
 .bold{
   font-weight: $font-weight-medium;
 }
-
 .nav-active{
   color: $branding-color;
   border-top: 5px solid $branding-color;
 }
-
 .modal-on{
   display: block;
+}
+.hidden{
+  display: none;
 }

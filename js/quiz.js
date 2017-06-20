@@ -7,6 +7,12 @@ var answerThree = document.getElementById('answer3');
 var answerFour = document.getElementById('answer4');
 var btnStart = document.querySelector('.btn-quiz');
 var btnNext = document.querySelector(".btn-next");
+var textQuiz = document.querySelector('.text-quiz');
+var scorePage = document.querySelector('.score-page');
+var fbRoot = document.querySelector('#fb-root');
+var fbButton = document.querySelector('.fb-button');
+var shareOnFacebook = document.querySelector('share-button');
+var saveQuiz = document.querySelector('.question-quiz');
 var index=0;
 var info;
 var random;
@@ -43,6 +49,11 @@ function printTestQuestion() {
     else{
       result = result + 0;
     }
+    console.log(btnNext);
+    scorePage.classList.remove('hidden');
+    fbRoot.classList.remove('hidden');
+    textQuiz.classList.add('hidden');
+    btnNext.classList.add('hidden');
     console.log("Tu resultado es " + result);
   }
 }
@@ -75,6 +86,39 @@ function getTestInfo() {
   request.send();
 }
 
+//botón facebook-  jssdk
+window.fbAsyncInit = function() {
+  var FB;
+  FB.init({
+    appId: '283603242103495',
+    autoLogAppEvents: true,
+    xfbml: true,
+    version: 'v2.9'
+  });
+  FB.AppEvents.logPageView();
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {
+    return;
+  }
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
 function initTest(){
   getTestInfo();
   result = 0;
@@ -82,3 +126,4 @@ function initTest(){
 }
 
 btnStart.addEventListener('click', initTest);
+fbRoot.addEventListener('click', shareOnFacebook);
