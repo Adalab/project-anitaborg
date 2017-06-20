@@ -315,6 +315,27 @@ h1, h2, h3, h4, h5, h6, a {
   background-color: transparent;
   border: black; }
 
+.title-result {
+  font-size: 24px;
+  color: #555;
+  text-align: center;
+  margin: 0; }
+
+.subtitle-result {
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+  margin-bottom: 0; }
+
+.score {
+  font-size: 100px;
+  color: #555;
+  text-align: center;
+  margin: 0; }
+
+.fb-button {
+  text-align: center; }
+
 @media (min-width: 800px) {
   .transparent-block-page {
     width: 45%;
@@ -354,7 +375,21 @@ h1, h2, h3, h4, h5, h6, a {
     font-size: 64px; }
 
   .question-text {
-    font-size: 30px; } }
+    font-size: 30px; }
+
+  .title-result {
+    font-size: 64px;
+    text-align: left; }
+
+  .subtitle-result {
+    font-size: 30px;
+    text-align: left; }
+
+  .score {
+    font-size: 200px; }
+
+  .fb-button {
+    text-align: left; } }
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

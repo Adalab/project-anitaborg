@@ -70,6 +70,27 @@
   background-color: transparent;
   border: black;
 }
+.title-result{
+  font-size: 24px;
+  color: $dark-color-typography;
+  text-align: center;
+  margin: 0;
+}
+.subtitle-result{
+  font-size: 18px;
+  text-align: center;
+  color: $dark-color-typography;
+  margin-bottom: 0;
+}
+.score{
+  font-size: 100px;
+  color: $dark-color-typography;
+  text-align: center;
+  margin: 0;
+}
+.fb-button{
+  text-align: center;
+}
 
 
 @media (min-width: $breakpoint-desktop){
@@ -107,5 +128,19 @@
   }
   .question-text{
     font-size: 30px;
+  }
+  .title-result{
+    font-size: 64px;
+    text-align: left;
+  }
+  .subtitle-result{
+    font-size: 30px;
+    text-align: left;
+  }
+  .score{
+    font-size: 200px;
+  }
+  .fb-button{
+    text-align: left;
   }
 }
