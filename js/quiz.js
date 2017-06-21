@@ -9,7 +9,6 @@ var btnStart = document.querySelector('.btn-quiz');
 var btnNext = document.querySelector(".btn-next");
 var textQuiz = document.querySelector('.text-quiz');
 var scorePage = document.querySelector('.score-page');
-var fbRoot = document.querySelector('#fb-root');
 var fbButton = document.querySelector('.fb-button');
 var totalScore = document.querySelector('.score');
 var index=0;
@@ -49,7 +48,6 @@ function printTestQuestion() {
       result = result + 0;
     }
     scorePage.classList.remove('hidden');
-    fbRoot.classList.remove('hidden');
     fbButton.classList.remove('hidden');
     textQuiz.classList.add('hidden');
     btnNext.classList.add('hidden');
@@ -92,3 +90,11 @@ function initTest(){
 }
 
 btnStart.addEventListener('click', initTest);
+
+fbButton.onclick = function() {
+  FB.ui({
+    method: 'share',
+    mobile_iframe: true,
+    href: 'https://adalab.github.io/anitaBorg/',
+  }, function(response){});
+}
