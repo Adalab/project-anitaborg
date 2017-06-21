@@ -96,7 +96,7 @@ fbButton.onclick = function() {
   FB.ui({
     method: 'share',
     mobile_iframe: true,
-    quote: "Tu resultado es " + result,
+    quote: "¡He sacado un " + result + "en el test tecnológico de Anita Borg. ¿Te atreves a superarme?",
     href: 'https://adalab.github.io/anitaBorg/quiz.html',
   }, function(response){});
 };
