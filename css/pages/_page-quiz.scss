@@ -1,26 +1,26 @@
-.main-quiz{
+.main-quiz {
   background-color: black;
   padding-top: 44px;
   position: relative;
   flex-grow: 1;
 }
-.img-einstein{
+.img-einstein {
   width: 100%;
 }
-.img-einstein img{
+.img-einstein img {
   width: 100%;
 }
-.transparent-block-page{
+.transparent-block-page {
   display: flex;
   flex-direction: column;
-  padding:  0px 20px 30px;
+  padding: 0 20px 30px;
   color: white;
 }
-.title-block-quiz{
-  color:$dark-color-typography;
+.title-block-quiz {
+  color: $light-color-typography;
   text-align: center;
 }
-.quiz-modal{
+.quiz-modal {
   position: absolute;
   z-index: 99;
   width: 100%;
@@ -30,7 +30,7 @@
   left: 0;
   display: none;
 }
-.info-quiz{
+.info-quiz {
   width: 80%;
   max-width: 900px;
   margin: 20px auto 0;
@@ -39,7 +39,7 @@
   flex-direction: column;
   color: $dark-color-typography;
 }
-.btn-close{
+.btn-close {
   align-self: flex-end;
   background-color: transparent;
   border: none;
@@ -48,70 +48,110 @@
   margin-top: 10px;
   margin-right: 10px;
 }
-.question-quiz{
+.question-quiz {
   display: flex;
   flex-direction: column;
   padding: 0 50px 50px;
   color: $dark-color-typography;
 }
-.number-question{
+.number-question {
   font-size: 24px;
   margin: 0;
-  color:$dark-color-typography;
+  color: $dark-color-typography;
 }
-.question-text{
+.question-text {
   font-size: 18px;
-  color:$dark-color-typography;
+  color: $dark-color-typography;
 }
-.container-option-quiz{
+.container-option-quiz {
   margin: 5px 0;
 }
-.option-quiz{
+.option-quiz {
   margin: 10px 0;
   cursor: pointer;
 }
-.radio-format{
+.radio-format {
   cursor: pointer;
   background-color: transparent;
   border: black;
 }
+.title-result {
+  font-size: 24px;
+  color: $dark-color-typography;
+  text-align: center;
+  margin: 0;
+}
+.subtitle-result {
+  font-size: 18px;
+  text-align: center;
+  color: $dark-color-typography;
+  margin-bottom: 0;
+}
+.score {
+  font-size: 100px;
+  color: $dark-color-typography;
+  text-align: center;
+  margin: 0;
+}
+.fb-button {
+  text-align: center;
+}
 
-
-
-@media (min-width: $breakpoint-desktop){
-  .transparent-block-page{
+@media (min-width: $breakpoint-desktop) {
+  .transparent-block-page {
     width: 45%;
     padding: 0;
   }
-  .title-block-quiz{
+
+  .title-block-quiz {
     max-width: 350px;
     font-size: 64px;
     font-weight: $font-weight-regular;
     margin-top: 0;
     text-align: left;
   }
-  .main-quiz{
+
+  .main-quiz {
     background-image: url("../images/einstein.jpg");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 40%;
     background-attachment: scroll;
-    padding: 100px 76px ;
+    padding: 100px 76px;
   }
-  .img-einstein{
+
+  .img-einstein {
     display: none;
   }
-  .img-einstein img{
+
+  .img-einstein img {
     width: 100%;
   }
-  .text-block-colum{
+
+  .text-block-colum {
     flex-direction: column;
     align-items: flex-start;
   }
-  .number-question{
+
+  .number-question {
     font-size: 64px;
   }
-  .question-text{
+
+  .question-text {
     font-size: 30px;
+  }
+   .title-result{
+    font-size: 64px;
+    text-align: left;
+  }
+  .subtitle-result{
+    font-size: 30px;
+    text-align: left;
+  }
+  .score{
+    font-size: 200px;
+  }
+  .fb-button{
+    text-align: left;
   }
 }
