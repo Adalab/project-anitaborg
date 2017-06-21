@@ -93,6 +93,7 @@ btnStart.addEventListener('click', initTest);
 
 fbButton.onclick = function() {
   FB.ui({
+    quote: "Tu resultado es "+ result,
     method: 'share',
     mobile_iframe: true,
     href: 'https://adalab.github.io/anitaBorg/quiz.html',
