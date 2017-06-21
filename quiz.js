@@ -52,6 +52,7 @@ function printTestQuestion() {
     textQuiz.classList.add('hidden');
     btnNext.classList.add('hidden');
     totalScore.innerHTML = result;
+    document.getElementById("result-facebook").setAttribute("content", "Mi resultado ha sido: "+ result +"/10");
   }
 }
 
@@ -93,9 +94,9 @@ btnStart.addEventListener('click', initTest);
 
 fbButton.onclick = function() {
   FB.ui({
-    quote: "Tu resultado es "+ result,
     method: 'share',
     mobile_iframe: true,
+    quote: "Tu resultado es " + result,
     href: 'https://adalab.github.io/anitaBorg/quiz.html',
   }, function(response){});
-}
+};
