@@ -1,3 +1,33 @@
+input[type="radio"]{
+  display:none;
+}
+input[type="radio"] + label{
+  padding: 0 0 0 1.5em;
+  position: relative;
+}
+input[type="radio"] + label::before{
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  left: 0.25em;
+  position: absolute;
+  top: 0.45em;
+  width: 0.5em;
+}
+input[type="radio"]:checked + label:before{
+  background: $branding-color;
+}
+input[type="radio"]:disabled + label{
+  color: #999;
+}
+input[type="radio"]:disabled + label:before{
+  background: #999;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #999;
+}
+
 .btn{
   border: none;
   padding: 0;
