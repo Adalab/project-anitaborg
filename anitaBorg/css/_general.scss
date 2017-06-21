@@ -1,0 +1,22 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container-option-quiz{
+  display: flex;
+flex-direction: row;
+}

@@ -1,0 +1,56 @@
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 99;
+  background: $light-background;
+  width: 100%;
+}
+
+.nav{
+  list-style: none;
+  display: flex;
+  padding: 0;
+  padding-top: 15px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.link-item{
+  color: $dark-color-typography;
+  padding-top: 10px;
+  transition: color 0.5s, border 0.5s;
+  font-weight: $font-weight-medium;
+}
+
+.space-link{
+  margin: 0 20px;
+}
+
+.link-item:hover{
+  color: $branding-color;
+}
+
+.logo-adalab{
+  width: 100px;
+}
+
+.img-logo{
+  width: 100%;
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .header{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+  .header-hero{
+    position: absolute;
+  }
+
+  .space-link{
+    margin: 0 30px;
+  }
+}

@@ -1,0 +1,81 @@
+input[type="radio"]{
+  display:none;
+}
+input[type="radio"] + label{
+  padding: 0 0 0 1.5em;
+  position: relative;
+}
+input[type="radio"] + label::before{
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  left: 0.25em;
+  position: absolute;
+  top: 0.45em;
+  width: 0.5em;
+}
+input[type="radio"]:checked + label:before{
+  background: $branding-color;
+}
+input[type="radio"]:disabled + label{
+  color: #999;
+}
+input[type="radio"]:disabled + label:before{
+  background: #999;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #999;
+}
+
+.btn{
+  border: none;
+  padding: 0;
+  background-color: $branding-color;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 280px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 15px;
+  cursor: pointer;
+}
+.gradient-btn-start{
+  height: 40px;
+  width: 40px;
+  background-image: linear-gradient(to bottom, $branding-color, #2aa393);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-text{
+  margin: 0;
+  margin-left: 20px;
+  font-family: $main-typography;
+  color: $dark-color-typography;
+  font-size: 18px;
+}
+.icon-btn{
+  width: 32px;
+}
+.btn-next{
+  margin-top: 15px;
+}
+
+@media (min-width: $breakpoint-desktop){
+  .btn {
+    width: 400px;
+    max-width: 400px;
+    height: 64px;
+    margin: 0;
+  }
+  .btn-next{
+    margin-top: 15px;
+  }
+  .gradient-btn-start{
+    width: 16%;
+    height: 64px;
+  }
+}

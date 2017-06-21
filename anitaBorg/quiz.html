@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:url"                content="https://adalab.github.io/anitaBorg/quiz.html" />
+  <meta property="og:type"               content="website"/>
+  <meta property="og:title"              content="¡Ponte a Prueba!" id="result-facebook"/>
+  <meta property="og:description"        content="¿Te apetece probar tus conocimientos de informática? Pues a continuación te presentamos un pequeño test de 10 preguntas donde podrás poner a prueba tus conocimientos." />
+  <meta property="og:image:url"          content="images/app-image.JPG"/>
+  <title>Anita Borg</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '283603242103495',
+        xfbml      : true,
+        version    : 'v2.9'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+   (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div class="container">
+    <header class="header">
+      <ul class="nav">
+        <li class="uppercase">
+          <a href="index.html" class="link-item">Home</a>
+        </li>
+        <li class="uppercase">
+          <a href="quiz.html" class="link-item space-link nav-active">Prueba</a>
+        </li>
+        <li class="uppercase">
+          <a href="learn.html" class="link-item">Aprende</a>
+        </li>
+      </ul>
+      <a href="http://adalab.es/" target="_blank" class="logo-adalab">
+        <img class="img-logo" src="images/logo-adalab.png" alt="Logo Adalab">
+      </a>
+    </header>
+
+    <main class="main-quiz">
+      <div class="img-einstein"><img src="images/einstein.jpg" alt=""></div>
+      <div class="transparent-block-page">
+        <h1 class="uppercase title-block-quiz">¡Ponte a prueba!</h1>
+        <div class="text-and-link-quiz">
+          <p>
+            ¿Te apetece probar tus conocimientos de informática? Pues a continuación te presentamos un pequeño test de 10 preguntas donde podrás poner a prueba tus conocimientos. Puedes realizar el test el número de veces que quieras y compartir tu resultado en facebook
+            para que el resto de tus amigos vean tus resultados.
+          </p>
+          <p>
+            Si obtienes malos resultados siempre puedes acudir a nuestro apartado de libros para formarte un poco más ;)
+          </p>
+          <p>
+            ¡Mucha suerte!
+          </p>
+          <button type="button" name="button-quiz" class="btn btn-quiz">
+            <div class="gradient-btn-start">
+              <img  class="icon-btn" src="images/play.png" alt="Boton Play">
+            </div>
+            <p class="uppercase btn-text">Comenzar Test</p>
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz-modal">
+        <div class="info-quiz">
+          <button class="btn-close" type="button" name="button"><img src="images/cross.png" alt=""></button>
+          <div class="question-quiz">
+            <div class="text-quiz">
+              <p class="number-question"></p>
+              <p class="question-text"></p>
+              <div class="container-option-quiz">
+                <input class="radio-format " id="option1" type="radio" name="radiogroup" value="0">
+                <label class="option-quiz" id="answer1" for="option1"></label>
+              </div>
+              <div class="container-option-quiz">
+                <input class="radio-format" id="option2" type="radio" name="radiogroup" value="1">
+                <label class="option-quiz" id="answer2" for="option2"></label>
+              </div>
+              <div class="container-option-quiz">
+                <input class="radio-format" id="option3" type="radio" name="radiogroup" value="2">
+                <label class="option-quiz" id="answer3" for="option3"></label>
+              </div>
+              <div class="container-option-quiz">
+                <input class="radio-format" id="option4" type="radio" name="radiogroup" value="3">
+                <label class="option-quiz" id="answer4" for="option4"></label>
+              </div>
+            </div>
+
+            <div class="score-page hidden">
+              <p class="title-result">Resultado</p>
+              <p class="subtitle-result">Tu puntuación total es de:</p>
+              <p class="score"></p>
+           </div>
+           <div class="two-buttons">
+             <button type="button" name="button-quiz" class="btn btn-next">
+               <div class="gradient-btn-start">
+               </div>
+               <p class="uppercase btn-text">Siguiente</p>
+             </button>
+             <button type="button" name="button-facebook" class="btn fb-button hidden" target="_blank">
+               <div class="gradient-btn-start">
+                 <img class="icon-btn" src="images/facebook-icon.png" alt="Boton Compartir Facebook">
+               </div>
+               <p class="uppercase btn-text">Compartir en Facebook</p>
+             </a>
+           </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="uppercase copyright">Adalab 2017</p>
+    </footer>
+  </div>
+
+  <script src="js/modal.js" charset="utf-8"></script>
+  <script src="js/quiz.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+.main-quiz{
+  background-color: black;
+  padding-top: 44px;
+  position: relative;
+  flex-grow: 1;
+}
+.img-einstein{
+  width: 100%;
+}
+.img-einstein img{
+  width: 100%;
+}
+.transparent-block-page{
+  display: flex;
+  flex-direction: column;
+  padding:  0px 20px 30px;
+  color: white;
+}
+.title-block-quiz{
+  color:$dark-color-typography;
+  text-align: center;
+}
+.quiz-modal{
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.info-quiz{
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  color: $dark-color-typography;
+}
+.btn-close{
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.question-quiz{
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px 50px;
+  color: $dark-color-typography;
+}
+.number-question{
+  font-size: 24px;
+  margin: 0;
+  color:$dark-color-typography;
+}
+.question-text{
+  font-size: 18px;
+  color:$dark-color-typography;
+}
+.container-option-quiz{
+  margin: 5px 0;
+}
+.option-quiz{
+  margin: 10px 0;
+  cursor: pointer;
+}
+.radio-format{
+  cursor: pointer;
+  background-color: transparent;
+  border: black;
+}
+
+
+
+@media (min-width: $breakpoint-desktop){
+  .transparent-block-page{
+    width: 45%;
+    padding: 0;
+  }
+  .title-block-quiz{
+    max-width: 350px;
+    font-size: 64px;
+    font-weight: $font-weight-regular;
+    margin-top: 0;
+    text-align: left;
+  }
+  .main-quiz{
+    background-image: url("../images/einstein.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 40%;
+    background-attachment: scroll;
+    padding: 100px 76px ;
+  }
+  .img-einstein{
+    display: none;
+  }
+  .img-einstein img{
+    width: 100%;
+  }
+  .text-block-colum{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .number-question{
+    font-size: 64px;
+  }
+  .question-text{
+    font-size: 30px;
+  }
+}

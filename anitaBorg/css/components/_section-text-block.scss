@@ -1,0 +1,53 @@
+.text-block{
+  padding: 20px;
+}
+.title-block{
+  font-size: 1.5em;
+  text-align: center;
+}
+.link-wiki{
+  font-weight: $font-weight-regular;
+  color: $branding-color;
+  transition: color 0.5s;
+}
+.link-wiki:hover{
+  color: $light-color-typography;
+}
+.section-dark{
+  color: $light-color-typography;
+  background-color: $dark-background;
+}
+.section-light{
+  color: $dark-color-typography;
+  background-color: $light-background;
+}
+.section-reverse{
+  order: -1;
+
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .text-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 76px ;
+  }
+  .photo-hero{
+    position: relative;
+  }
+  .title-block{
+    width: 35%;
+    font-size: 4em;
+    font-weight: $font-weight-regular;
+    text-align: left;
+  }
+  .text-and-link{
+    width: 45%;
+  }
+  .transparent-block{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0);
+  }
+}
