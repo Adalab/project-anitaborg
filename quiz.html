@@ -4,26 +4,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <meta property="og:url"                content="https://adalab.github.io/anitaBorg/" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="¡Ponte a Prueba" />
+  <meta property="og:description"        content="¿Te apetece probar tus conocimientos de informática? Pues a continuación te presentamos un pequeño test de 10 preguntas donde podrás poner a prueba tus conocimientos." />
+  <meta property="og:image"              content="images/app-image.JPG"/>
   <title>Anita Borg</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Open+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
-  <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Your Website Title" />
-  <meta property="og:description"   content="Your description" />
-  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 </head>
 
 <body>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "http//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
-   fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '283603242103495',
+        xfbml      : true,
+        version    : 'v2.9'
+      });
+      FB.AppEvents.logPageView();
+    };
 
+   (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
   <div class="container">
     <header class="header">
       <ul class="nav">
@@ -102,18 +111,23 @@
                </div>
                <p class="uppercase btn-text">Siguiente</p>
              </button>
-             <div class="fb-button hidden">
-               <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true">
-                 <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
-                   Compartir
-                 </a>
+             <button type="button" name="button-facebook" class="btn fb-button hidden" target="_blank">
+               <div class="gradient-btn-start">
+                 <img class="icon-btn" src="images/facebook-icon.png" alt="Boton Compartir Facebook">
                </div>
-             </div>
+               <p class="uppercase btn-text">Compartir en Facebook</p>
+             </a>
            </div>
           </div>
         </div>
       </div>
     </main>
+    <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 
     <footer class="footer">
       <p class="uppercase copyright">Adalab 2017</p>
