@@ -1,7 +1,9 @@
 var gridBooks = document.querySelector("#grid-books");
+var peticionHttp;
 
 function downloadFile() {
   // Obtener la instancia del objeto XMLHttpRequest
+
   if (window.XMLHttpRequest) {
     peticionHttp = new XMLHttpRequest();
   } else if (window.ActiveXObject) {
@@ -19,7 +21,7 @@ function downloadFile() {
         //Creamos el objeto de tipo documento XML
         var documentoXml = peticionHttp.responseXML;
         //Obtenemos la raíz del documento
-        var root = documentoXml.getElementsByTagName("GoodreadsResponse")[0];
+        var root = documentoXml.getElementsByTagName(GoodreadsResponse)[0];
         var stopPoint = 9;
         //Recorremos todos los elementos Libro del documento
         var booksHTML = "";
