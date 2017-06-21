@@ -95,6 +95,6 @@ fbButton.onclick = function() {
   FB.ui({
     method: 'share',
     mobile_iframe: true,
-    href: 'https://adalab.github.io/anitaBorg/',
+    href: 'https://adalab.github.io/anitaBorg/quiz.html',
   }, function(response){});
 }
