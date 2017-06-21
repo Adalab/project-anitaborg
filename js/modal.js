@@ -9,7 +9,6 @@ function openModal(){
 function closeModal(){
   modal.classList.remove("modal-on");
   scorePage.classList.add('hidden');
-  fbRoot.classList.add('hidden');
   fbButton.classList.add('hidden');
   textQuiz.classList.remove('hidden');
   btnNext.classList.remove('hidden');
