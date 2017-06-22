@@ -1,12 +1,16 @@
 var gridBooks = document.querySelector("#grid-books");
 var booksHTML = "";
 var stopPoint = 9;
+var titlesDefault = ["Algorithms to Live By: The Computer Science of Human Decisions", "Concrete Mathematics: A Foundation for Computer Science", "Structure and Interpretation of Computer Programs (MIT Electrical Engineering and Computer Science", "Computer Science: An Overview", "Software Engineering (International Computer Science Series", "Python Programming: An Introduction to Computer Science", "Writing for Computer Science", "Mathematics for Computer Science", "The New Turing Omnibus: 66 Excursions In Computer Science"];
+var authorsDefault = ["Brian Christian", "Ronald L. Graham", "Harold Abelson", "J. Glenn Brookshear", "Ian Sommerville", "John M. Zelle", "Justin Zobel", "Eric Lehman", "A.K. Dewdney"];
+var valorationsDefault = ["4.16", "4.30", "4.45", "3.76", "3.72", "3.94", "3.97", "3.97", "3.84"];
+var coversDefault = ["https://images.gr-assets.com/books/1454296875m/25666050.jpg", "images/cover_book_non-defined.png", "images/cover_book_non-defined.png", "images/cover_book_non-defined.png", "images/cover_book_non-defined.png", "images/cover_book_non-defined.png", "images/cover_book_non-defined.png", "https://images.gr-assets.com/books/1375771781m/12836498.jpg", "images/cover_book_non-defined.png"];
 
 for (var i = 0; i < stopPoint; i++) {
-  var author = "autor";
-  var title = "titulo";
-  var valoration = "5";
-  var cover = "images/cover_book_non-defined.png";
+  var title = titlesDefault[i];
+  var author = authorsDefault[i];
+  var valoration = valorationsDefault[i];
+  var cover = coversDefault[i];
   booksHTML += '<div class="random-book"><div class="cover-photo-book"><img class="img-cover-book" src="' + cover + '" alt=""></div><div class="info-book"><p class="title-book"><span class="bold-text">' + title + '</span></p><p class="author-book">' + author + '</p><p class="user-valoration">' + valoration + '/10</p></div></div>';
 }
 gridBooks.innerHTML = booksHTML;
@@ -32,8 +36,9 @@ function downloadFile() {
         //Obtenemos la raíz del documento
         var root = documentoXml.getElementsByTagName("GoodreadsResponse")[0];
         //Recorremos todos los elementos Libro del documento
-        for (var i = 0; i < stopPoint; i++) {
-          var book = root.getElementsByTagName("best_book")[i];
+        booksHTML = "";
+        for (var j = 0; j < stopPoint; j++) {
+          var book = root.getElementsByTagName("best_book")[j];
           var author = book.getElementsByTagName("name")[0].firstChild.nodeValue;
           var title = book.getElementsByTagName("title")[0].firstChild.nodeValue;
           var valoration = root.getElementsByTagName("average_rating")[0].firstChild.nodeValue;

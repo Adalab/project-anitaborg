@@ -246,6 +246,15 @@ input[type="radio"]:disabled + label:before {
 .random-book p {
   margin: 2px 0; }
 
+.title-book {
+  font-size: 15px; }
+
+.author-book {
+  font-size: 13px; }
+
+.user-valoration {
+  font-size: 13px; }
+
 @media (min-width: 800px) {
   .title-block-learn {
     max-width: 568px;
@@ -262,7 +271,10 @@ input[type="radio"]:disabled + label:before {
     display: -ms-flexbox;
     display: flex;
     color: white;
-    width: 50%; } }
+    width: 50%; }
+
+  #grid-books {
+    margin: 30px 0px; } }
 @media (min-width: 1200px) {
   .random-book {
     width: 28%; } }
