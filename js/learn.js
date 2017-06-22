@@ -1,5 +1,7 @@
 var gridBooks = document.querySelector("#grid-books");
 var peticionHttp;
+var ActiveXObject;
+var GoodreadsResponse;
 
 function downloadFile() {
   // Obtener la instancia del objeto XMLHttpRequest
@@ -12,12 +14,12 @@ function downloadFile() {
   // Preparar la funcion de respuesta
   peticionHttp.onreadystatechange = muestraContenido;
   // Realizar peticion HTTP
-  peticionHttp.open('GET', 'https://www.goodreads.com/search.xml?key=Th7taggCCLhLD2r7cfAmlQ&q=Computer%27s+Science', true);
+  peticionHttp.open('GET', 'https://www.goodreads.com/search.xml?key=Th7taggCCLhLD2r7cfAmlQ&q=programing%27s+Science', true);
   peticionHttp.send(null);
 
   function muestraContenido() {
-    if (peticionHttp.readyState == 4) {
-      if (peticionHttp.status == 200) {
+    if (peticionHttp.readyState === 4) {
+      if (peticionHttp.status ===200) {
         //Creamos el objeto de tipo documento XML
         var documentoXml = peticionHttp.responseXML;
         //Obtenemos la raíz del documento
