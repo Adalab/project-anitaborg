@@ -13,13 +13,13 @@
 }
 .random-book{
   display: flex;
-  justify-content: space-between;
   color: white;
   width: 100%;
   margin-bottom: 20px;
 }
 .cover-photo-book{
-  width: 45%;
+  width: 125px;
+  margin-right: 20px;
 }
 .img-cover-book{
   width: 100%;
@@ -32,8 +32,7 @@
   margin: 2px 0;
 }
 
-
-@media (min-width: $breakpoint-desktop){
+@media (min-width: 800px){
   .title-block-learn{
     max-width: 568px;
     font-size: 64px;
@@ -47,6 +46,12 @@
   .random-book{
     display: flex;
     color: white;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px){
+  .random-book{
     width: 28%;
   }
 }
