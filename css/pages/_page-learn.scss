@@ -13,13 +13,13 @@
 }
 .random-book{
   display: flex;
-  justify-content: space-between;
   color: white;
   width: 100%;
   margin-bottom: 20px;
 }
 .cover-photo-book{
-  width: 45%;
+  width: 125px;
+  margin-right: 20px;
 }
 .img-cover-book{
   width: 100%;
@@ -31,7 +31,15 @@
 .random-book p{
   margin: 2px 0;
 }
-
+.title-book{
+  font-size: 15px;
+}
+.author-book{
+  font-size: 13px;
+}
+.user-valoration{
+  font-size: 13px;
+}
 
 @media (min-width: $breakpoint-desktop){
   .title-block-learn{
@@ -47,6 +55,15 @@
   .random-book{
     display: flex;
     color: white;
+    width: 50%;
+  }
+  #grid-books{
+    margin: 30px 0px;
+  }
+}
+
+@media (min-width: $breakpoint-big-desktop){
+  .random-book{
     width: 28%;
   }
 }

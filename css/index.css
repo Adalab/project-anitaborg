@@ -38,37 +38,6 @@ h1, h2, h3, h4, h5, h6, a {
 .bold-text {
   font-weight: 700; }
 
-input[type="radio"] {
-  display: none; }
-
-input[type="radio"] + label {
-  padding: 0 0 0 1.5em;
-  position: relative; }
-
-input[type="radio"] + label::before {
-  background: #fff;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
-          box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
-  content: "";
-  display: inline-block;
-  height: 0.5em;
-  left: 0.25em;
-  position: absolute;
-  top: 0.45em;
-  width: 0.5em; }
-
-input[type="radio"]:checked + label:before {
-  background: #30d9c4; }
-
-input[type="radio"]:disabled + label {
-  color: #999; }
-
-input[type="radio"]:disabled + label:before {
-  background: #999;
-  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #999;
-          box-shadow: 0 0 0 2px #fff, 0 0 0 4px #999; }
-
 .btn {
   border: none;
   padding: 0;
@@ -129,6 +98,37 @@ input[type="radio"]:disabled + label:before {
   .gradient-btn-start {
     width: 16%;
     height: 64px; } }
+input[type="radio"] {
+  display: none; }
+
+input[type="radio"] + label {
+  padding: 0 0 0 1.5em;
+  position: relative; }
+
+input[type="radio"] + label::before {
+  background: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  left: 0.25em;
+  position: absolute;
+  top: 0.45em;
+  width: 0.5em; }
+
+input[type="radio"]:checked + label:before {
+  background: #30d9c4; }
+
+input[type="radio"]:disabled + label {
+  color: #999; }
+
+input[type="radio"]:disabled + label:before {
+  background: #999;
+  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #999;
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px #999; }
+
 .text-block {
   padding: 20px; }
 
@@ -228,15 +228,13 @@ input[type="radio"]:disabled + label:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   color: white;
   width: 100%;
   margin-bottom: 20px; }
 
 .cover-photo-book {
-  width: 45%; }
+  width: 125px;
+  margin-right: 20px; }
 
 .img-cover-book {
   width: 100%; }
@@ -247,6 +245,15 @@ input[type="radio"]:disabled + label:before {
 
 .random-book p {
   margin: 2px 0; }
+
+.title-book {
+  font-size: 15px; }
+
+.author-book {
+  font-size: 13px; }
+
+.user-valoration {
+  font-size: 13px; }
 
 @media (min-width: 800px) {
   .title-block-learn {
@@ -264,6 +271,12 @@ input[type="radio"]:disabled + label:before {
     display: -ms-flexbox;
     display: flex;
     color: white;
+    width: 50%; }
+
+  #grid-books {
+    margin: 30px 0px; } }
+@media (min-width: 1200px) {
+  .random-book {
     width: 28%; } }
 .main-quiz {
   background-color: black;
