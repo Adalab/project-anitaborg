@@ -1,4 +1,7 @@
 var gridBooks = document.querySelector("#grid-books");
+var peticionHttp;
+var ActiveXObject;
+var GoodreadsResponse;
 var booksHTML = "";
 var stopPoint = 9;
 var titlesDefault = ["Algorithms to Live By: The Computer Science of Human Decisions", "Concrete Mathematics: A Foundation for Computer Science", "Structure and Interpretation of Computer Programs (MIT Electrical Engineering and Computer Science", "Computer Science: An Overview", "Software Engineering (International Computer Science Series", "Python Programming: An Introduction to Computer Science", "Writing for Computer Science", "Mathematics for Computer Science", "The New Turing Omnibus: 66 Excursions In Computer Science"];
@@ -53,6 +56,5 @@ function downloadFile() {
     }
   }
 }
-
 
 window.onload = downloadFile;
