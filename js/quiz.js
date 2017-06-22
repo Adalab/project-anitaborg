@@ -26,7 +26,6 @@ function printTestQuestion() {
       result = result + 0;
     }
     random = Math.floor(Math.random() * (4 - 0)) + 0;
-    console.log(random);
     var positionAnswer = [];
     for (var i = 0; i < 3; i++) {
       positionAnswer.push(info.incorrectList[index][i]);
