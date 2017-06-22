@@ -41,7 +41,7 @@ function downloadFile() {
           var book = root.getElementsByTagName("best_book")[j];
           var author = book.getElementsByTagName("name")[0].firstChild.nodeValue;
           var title = book.getElementsByTagName("title")[0].firstChild.nodeValue;
-          var valoration = root.getElementsByTagName("average_rating")[i].firstChild.nodeValue;
+          var valoration = root.getElementsByTagName("average_rating")[j].firstChild.nodeValue;
           var cover = book.getElementsByTagName("image_url")[0].firstChild.nodeValue;
           if (cover === "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png") {
             cover = "images/cover_book_non-defined.png";
